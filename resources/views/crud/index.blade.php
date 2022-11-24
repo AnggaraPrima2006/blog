@@ -10,47 +10,31 @@
                     reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
                     ut ipsum quae quisquam consequatur eius?
                 </span>
-            <div class="">
-                <h1 class="text-lg font-semibold">Judul</h1>
-                <span class="text-sm">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Architecto quam deserunt voluptatibus corporis in assumenda,
-                    reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
-                    ut ipsum quae quisquam consequatur eius?
-                </span>
-            <div class="">
-                <h1 class="text-lg font-semibold">Judul</h1>
-                <span class="text-sm">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Architecto quam deserunt voluptatibus corporis in assumenda,
-                    reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
-                    ut ipsum quae quisquam consequatur eius?
-                </span>
-            <div class="">
-                <h1 class="text-lg font-semibold">Judul</h1>
-                <span class="text-sm">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Architecto quam deserunt voluptatibus corporis in assumenda,
-                    reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
-                    ut ipsum quae quisquam consequatur eius?
-                </span>
-            <div class="">
-                <h1 class="text-lg font-semibold">Judul</h1>
-                <span class="text-sm">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Architecto quam deserunt voluptatibus corporis in assumenda,
-                    reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
-                    ut ipsum quae quisquam consequatur eius?
-                </span>
-            <div class="">
-                <h1 class="text-lg font-semibold">Judul</h1>
-                <span class="text-sm">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Architecto quam deserunt voluptatibus corporis in assumenda,
-                    reiciendis veniam soluta molestiae, rem nemo quis fugit, suscipit
-                    ut ipsum quae quisquam consequatur eius?
-                </span>
             </div>
         </div>
     </div>
+    <table>
+    <tr>
+        <th class="px-4 py-2 border">No</th>
+        <th class="px-4 py-2 border">Judul</th>
+        <th class="px-4 py-2 border">Konten</th>
+        <th class="px-4 py-2 border">Aksi</th>
+    </tr>
+
+    <tr>
+        @forelse ($konten as $index => $item)
+        <th class="px-4 py-2 border">{{ $index }}</th>
+        <th class="px-4 py-2 border">{{ $item->judul }}</th>
+        <th class="px-4 py-2 border">{{ $item->konten }}</th>
+        <th class="px-4 py-2 border">
+            <div>
+                <a href="">Edit</a>
+                <a href="">Deletet</a>
+            </div>
+        @empty    
+        <th colspan="12" class="px-4 py-2 border">Tidak Ada Konten</th>
+        @endforelse
+
+    </tr>
+    </table>
 @endsection

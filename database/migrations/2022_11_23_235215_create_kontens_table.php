@@ -17,7 +17,7 @@ class CreateKontensTable extends Migration
             $table->id();
             $table->string('judul')->nullabel;
             $table->text('konten')->nullabel;
-            $table->timestamps();
+            $table->timestamps() ;
             
         });
     }
